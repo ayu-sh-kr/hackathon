@@ -5,11 +5,16 @@
             High-demand job categories feature software development, nursing, and digital marketing roles
         </p>
     </div>
-    <div class="flex justify-around flex-wrap">
+    <div class="place-items-center grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-y-10 text-center">
         @for (category of categories; track $index) {
-            <div>
-                <div class="w-full flex justify-center">
-                    <div [innerHTML]="getSafeSVG(category.svg)"></div>
+            <div class="bg-white w-[200px] h-[150px] shadow-white-blur float-right flex items-center justify-center">
+                <div>
+                    <div class="w-full flex justify-center">
+                        <div [innerHTML]="getSafeSVG(category.svg)"></div>
+                    </div>
+                    <div class="gradient-text font-semibold text-center text-lg">
+                        {{category.title}}
+                    </div>
                 </div>
             </div>
         }
