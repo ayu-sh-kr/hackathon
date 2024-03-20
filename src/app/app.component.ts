@@ -4,12 +4,14 @@ import {HeroComponent} from "./hero/hero.component";
 import {HeaderComponent} from "./header/header.component";
 import {ResumeGenerateComponent} from "./resume-generate/resume-generate.component";
 import {JobFuseComponent} from "./job-fuse/job-fuse.component";
-import { FooterComponent } from './footer/footer.component';
+import {SpotlightComponent} from "./spotlight/spotlight.component";
+import {FooterComponent} from "./footer/footer.component";
+import {CategoryComponent} from "./category/category.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent,FooterComponent],
+    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
