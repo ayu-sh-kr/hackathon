@@ -11,11 +11,12 @@ import {JobsComponent} from "./jobs/jobs.component";
 import { HowitworksComponent } from './howitworks/howitworks.component';
 import {ChallengeComponent} from "./challenge/challenge.component";
 import {DashboardComponent} from "./dashboard/dashboard.component";
+import {RecentblogComponent} from "./recentblog/recentblog.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent, JobsComponent, HowitworksComponent, ChallengeComponent, DashboardComponent],
+    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent, JobsComponent, HowitworksComponent, ChallengeComponent, DashboardComponent, RecentblogComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
