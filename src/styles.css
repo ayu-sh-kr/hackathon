@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.active-header {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 border-b text-shadow-white border-gradient;
+}
+
+.gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 border-b text-shadow-white border-gradient;
+}
+
+.bg-image {
+    background-image: url("assets/section/section1.png");
+    background-size: cover;
+}
+
+.text-shadow-white {
+    text-shadow: 10px 4px 50px #ffffff;
+}
+
+.border-gradient {
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.border-gradient::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 50%, #FCB045 100%);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+
+
+

@@ -1,0 +1,20 @@
+<section class="my-5 w-full h-screen">
+    <div class="text-4xl text-white text-shadow-white-glow text-center font-semibold py-3">
+        Job Fuse
+    </div>
+
+    <div class="text-white text-center my-3">
+        Unlock endless career possibilities with Myfuse – the platform that bridges gap between Students and Job opportunities in India.
+    </div>
+    <div class="flex md:justify-around justify-center gap-y-10 items-center flex-wrap my-10">
+        @for(fuse of fuses; track $index) {
+            <div class="w-[320px] shadow-white-blur rounded-xl px-3 py-2 bg-white">
+                <div>
+                    {{fuse.svg}}
+                </div>
+                <h1 class="text-lg my-3 gradient-text w-fit cursor-pointer">{{fuse.title}}</h1>
+                <h1 class="text-[16px]">{{fuse.description}}</h1>
+            </div>
+        }
+    </div>
+</section>
