@@ -8,12 +8,10 @@
     </div>
     <div class="flex md:justify-around justify-center gap-y-10 items-center flex-wrap my-10">
         @for(fuse of fuses; track $index) {
-            <div class="w-[320px] shadow-white-blur rounded-xl px-3 py-2 bg-white">
-                <div>
-                    {{fuse.svg}}
-                </div>
-                <h1 class="text-lg my-3 gradient-text w-fit cursor-pointer">{{fuse.title}}</h1>
-                <h1 class="text-[16px]">{{fuse.description}}</h1>
+            <div class="min-w-[260px] max-w-[280px] shadow-white-blur rounded-xl px-3 py-2 bg-white h-[313px]">
+                <div class="rounded-full p-3 w-fit" [innerHTML]="getSafeSVG(fuse.svg)"></div>
+                <h1 class="text-xl my-3 p-2 gradient-text w-fit cursor-pointer">{{fuse.title}}</h1>
+                <h1 class="p-2 text-lg">{{fuse.description}}</h1>
             </div>
         }
     </div>
