@@ -9,11 +9,12 @@ import {FooterComponent} from "./footer/footer.component";
 import {CategoryComponent} from "./category/category.component";
 import {JobsComponent} from "./jobs/jobs.component";
 import { HowitworksComponent } from './howitworks/howitworks.component';
+import {ChallengeComponent} from "./challenge/challenge.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent, JobsComponent,HowitworksComponent],
+    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent, JobsComponent, HowitworksComponent, ChallengeComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
