@@ -12,6 +12,10 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400 border-b text-shadow-white border-gradient;
 }
 
+.gradient-bg {
+    @apply bg-gradient-to-r from-pink-400 via-red-400 to-yellow-400
+}
+
 .bg-image {
     background-image: url("assets/section/section1.png");
     background-size: cover;
@@ -28,14 +32,48 @@
 
 .border-gradient::before {
     content: "";
-    position: absolute;
     top: -2px;
     left: -2px;
     right: -2px;
     bottom: -2px;
     background: linear-gradient(90deg, #833AB4 0%, #FD1D1D 50%, #FCB045 100%);
-    z-index: -1;
     border-radius: inherit;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating {
+    animation: float 2s ease-in-out infinite;
+}
+
+.bg-image2 {
+    background-image: url("assets/section/blackhole4.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.animated-text {
+    font-size: 3em;
+    background: linear-gradient(90deg, deeppink, red, yellow, blue, blueviolet, rebeccapurple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+    0% {background-position: 100%;}
+    100% {background-position: 0%;}
 }
 
 

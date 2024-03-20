@@ -1,17 +1,19 @@
-<section class="my-5 w-full h-screen">
-    <div class="text-4xl text-white text-shadow-white-glow text-center font-semibold py-3">
+<section class="my-10 w-full">
+    <div class="text-5xl text-white tracking-wider text-shadow-white-glow text-center font-semibold py-3">
         Job Fuse
     </div>
 
-    <div class="text-white text-center my-3">
+    <div class="text-white text-center my-3 tracking-wide">
         Unlock endless career possibilities with Myfuse – the platform that bridges gap between Students and Job opportunities in India.
     </div>
     <div class="flex md:justify-around justify-center gap-y-10 items-center flex-wrap my-10">
         @for(fuse of fuses; track $index) {
-            <div class="min-w-[260px] max-w-[280px] shadow-white-blur rounded-xl px-3 py-2 bg-white h-[313px]">
+            <div class="min-w-[260px] max-w-[280px] shadow-white-blur rounded-xl px-3 py-2 bg-white h-[313px] floating">
                 <div class="rounded-full p-3 w-fit" [innerHTML]="getSafeSVG(fuse.svg)"></div>
-                <h1 class="text-xl my-3 p-2 gradient-text w-fit cursor-pointer">{{fuse.title}}</h1>
-                <h1 class="p-2 text-lg">{{fuse.description}}</h1>
+                <div class="bg-white p-0.5">
+                    <h1 class="text-xl my-3 p-2 font-semibold gradient-text w-fit cursor-pointer">{{fuse.title}}</h1>
+                </div>
+                <h1 class="p-2">{{fuse.description}}</h1>
             </div>
         }
     </div>
