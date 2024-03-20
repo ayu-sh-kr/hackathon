@@ -1,22 +1,39 @@
-<section class="flex flex-col items-center gap-y-20 my-5">
+<section class="flex flex-col items-center gap-y-20 py-5 justify-center w-full px-20 min-h-screen">
 
-    @for(item of jobs; track $index) {
-        <div>
-            <div>
+    @for (item of jobs; track $index) {
+        <div class="flex justify-between bg-white rounded-md py-4 px-3 shadow-white-blur md:w-[500px] lg:gap-x-20 lg:w-[850px] flex-wrap">
+            <div class="flex items-center gap-x-10">
                 <div>
-                    <img src="{{item.image}}" alt="company logo image">
+                    <img src="{{item.image}}" alt="company logo image" class="h-20 w-32">
                 </div>
-                <div>
-                    <h1>{{item.company}}</h1>
-                    <div>
-                        <span>{{item.category}}</span>
-                        
+                <div class="flex flex-col gap-y-3">
+                    <h1 class="text-xl font-semibold text-slate-800">{{ item.company }}</h1>
+                    <div class="flex gap-x-3 text-sm flex-wrap gap-y-2">
+                        <span>{{ item.category }}</span>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                 stroke="currentColor" class="w-6 h-4">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                                  <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
+                            </svg>
+
+                            <span>{{ item.location }}</span>
+                        </div>
+                        <span>{{ item.ctc }}</span>
+                    </div>
+                    <div class="text-sm">
+                        Job Role: <span class="font-semibold text-slate-600 text-[15px]">{{ item.role }}</span>
                     </div>
                 </div>
             </div>
-            <div>
-
+            <div class="flex flex-col items-center justify-center gap-y-3">
+                <div class="rounded-3xl px-5 py-1 text-slate-800 border hover:bg-slate-700 hover:text-white cursor-pointer">{{ item.workTime }}</div>
+                <div class="gradient-bg rounded-3xl text-white px-5 py-1 font-semibold cursor-pointer">Active</div>
             </div>
         </div>
     }
+    <div class="flex justify-center items-center">
+        <button class="gradient-bg px-5 py-2 text-white rounded-3xl font-semibold text-xl">Show More</button>
+    </div>
 </section>

@@ -12,7 +12,7 @@ export class JobsComponent {
     jobs: Job[] = [
         {
             company: 'Deloitte',
-            image: 'https://www.myfuse.in/dashboard/view-job-post.php?id=198',
+            image: 'https://www.myfuse.in/uploads/logo/Screenshot%202024-01-24%20at%2012.31.35%20PM.png',
             category: 'Technology and IT',
             location: 'Bengaluru',
             ctc: 'Not Disclosed',
@@ -23,10 +23,10 @@ export class JobsComponent {
 
         {
             company: 'AIRBUS',
-            image: 'https://www.myfuse.in/dashboard/view-job-post.php?id=197',
+            image: 'https://www.myfuse.in/uploads/logo/Screenshot%202024-01-24%20at%2012.28.26%20PM.png',
             category: 'Technology and IT',
             location: 'Bangalore Area',
-            ctc: 'Bangalore Area',
+            ctc: 'Not Disclosed',
             role: 'Data Analyst',
             active: false,
             workTime: 'Full Time'
@@ -34,7 +34,7 @@ export class JobsComponent {
 
         {
             company: 'Bajaj Allianz',
-            image: 'https://www.myfuse.in/dashboard/view-job-post.php?id=196',
+            image: 'https://www.myfuse.in/uploads/logo/Screenshot%202024-01-24%20at%2012.25.26%20PM.png',
             category: 'Technology and IT',
             location: 'Begusarai – Ext',
             ctc: ' 4.5 LPA (Expected)',
@@ -45,7 +45,7 @@ export class JobsComponent {
 
         {
             company: 'Amdocs',
-            image: 'https://www.myfuse.in/dashboard/view-job-post.php?id=195',
+            image: 'https://www.myfuse.in/uploads/logo/Screenshot%202024-01-24%20at%2012.22.12%20PM.png',
             category: 'Technology and IT',
             location: 'Pune, Maharashtra',
             ctc: ' 4 – 6 LPA (Estimated)',
