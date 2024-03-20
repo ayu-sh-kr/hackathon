@@ -1,1 +1,17 @@
-<p>category works!</p>
+<section class="flex flex-col gap-y-10">
+    <div class="">
+        <h1 class="section-header">Top Categories</h1>
+        <p class="section-para">
+            High-demand job categories feature software development, nursing, and digital marketing roles
+        </p>
+    </div>
+    <div class="flex justify-around flex-wrap">
+        @for (category of categories; track $index) {
+            <div>
+                <div class="w-full flex justify-center">
+                    <div [innerHTML]="getSafeSVG(category.svg)"></div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

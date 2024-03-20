@@ -76,6 +76,13 @@
     100% {background-position: 0%;}
 }
 
+.section-header {
+    @apply text-5xl text-white tracking-wider text-shadow-white-glow text-center font-semibold py-3
+}
+
+.section-para {
+    @apply text-white text-center tracking-wide my-5 p-2
+}
 
 
 
