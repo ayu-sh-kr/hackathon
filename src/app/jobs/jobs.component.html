@@ -1,0 +1,21 @@
+<section class="flex flex-col items-center gap-y-20 my-5">
+
+    @for(item of jobs; track $index) {
+        <div>
+            <div>
+                <div>
+                    <img src="{{item.image}}" alt="company logo image">
+                </div>
+                <div>
+                    <h1>{{item.company}}</h1>
+                    <div>
+                        <span>{{item.}}</span>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    }
+</section>

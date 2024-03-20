@@ -7,11 +7,12 @@ import {JobFuseComponent} from "./job-fuse/job-fuse.component";
 import {SpotlightComponent} from "./spotlight/spotlight.component";
 import {FooterComponent} from "./footer/footer.component";
 import {CategoryComponent} from "./category/category.component";
+import {JobsComponent} from "./jobs/jobs.component";
 
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent],
+    imports: [RouterOutlet, HeroComponent, HeaderComponent, ResumeGenerateComponent, JobFuseComponent, SpotlightComponent, FooterComponent, CategoryComponent, JobsComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css'
 })
