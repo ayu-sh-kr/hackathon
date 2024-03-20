@@ -1,46 +1,43 @@
-<footer class="bg-slate-100" aria-labelledby="footer-heading">
+<footer class="bg-transparent" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div
-        class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32 text-white"
-    >
+    <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-            <h1 class="text-2xl font-bold">Webinngo</h1>
+            <h1 class="text-2xl font-bold gradient-text">MyFuse.in</h1>
             <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
                         <h3
-                            class="text-sm font-semibold leading-6 text-gray-900"
+                            class="text-sm font-semibold leading-6 text-yellow-500"
                         >
                             Solutions
                         </h3>
                         <ul role="list" class="mt-6 space-y-4">
-
                             @for(item of navigation.solutions; track $index) {
-                                <li>
-                                    <a
-                                        [attr.href]="item.href"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                            <li>
+                                <a
+                                    [attr.href]="item.href"
+                                    class="text-sm leading-6 text-yellow-600 hover:text-yellow-900"
                                     >{{ item.name }}</a
-                                    >
-                                </li>
+                                >
+                            </li>
                             }
                         </ul>
                     </div>
                     <div class="mt-10 md:mt-0">
                         <h3
-                            class="text-sm font-semibold leading-6 text-gray-900"
+                            class="text-sm font-semibold leading-6 text-yellow-500"
                         >
                             Support
                         </h3>
                         <ul role="list" class="mt-6 space-y-4">
                             @for (item of navigation.support; track $index) {
-                                <li>
-                                    <a
-                                        [attr.href]="item.href"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                            <li>
+                                <a
+                                    [attr.href]="item.href"
+                                    class="text-sm leading-6 text-yellow-600 hover:text-yellow-900"
                                     >{{ item.name }}</a
-                                    >
-                                </li>
+                                >
+                            </li>
                             }
                         </ul>
                     </div>
@@ -48,37 +45,37 @@
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
                         <h3
-                            class="text-sm font-semibold leading-6 text-gray-900"
+                            class="text-sm font-semibold leading-6 text-yellow-500"
                         >
                             Company
                         </h3>
                         <ul role="list" class="mt-6 space-y-4">
                             @for (item of navigation.company; track $index) {
-                                <li>
-                                    <a
-                                        [attr.href]="item.href"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                            <li>
+                                <a
+                                    [attr.href]="item.href"
+                                    class="text-sm leading-6 text-yellow-600 hover:text-yellow-900"
                                     >{{ item.name }}</a
-                                    >
-                                </li>
+                                >
+                            </li>
                             }
                         </ul>
                     </div>
                     <div class="mt-10 md:mt-0">
                         <h3
-                            class="text-sm font-semibold leading-6 text-gray-900"
+                            class="text-sm font-semibold leading-6 text-yellow-500"
                         >
                             Legal
                         </h3>
                         <ul role="list" class="mt-6 space-y-4">
                             @for (item of navigation.legal; track $index){
-                                <li>
-                                    <a
-                                        [attr.href]="item.href"
-                                        class="text-sm leading-6 text-gray-600 hover:text-gray-900"
+                            <li>
+                                <a
+                                    [attr.href]="item.href"
+                                    class="text-sm leading-6 text-yellow-600 hover:text-yellow-900"
                                     >{{ item.name }}</a
-                                    >
-                                </li>
+                                >
+                            </li>
                             }
                         </ul>
                     </div>
@@ -91,17 +88,22 @@
         >
             <div class="flex space-x-6 md:order-2">
                 @for (item of navigation.social; track $index) {
-                    <a [attr.href]="item.href" class="text-gray-400 hover:text-gray-500">
-                        <span class="sr-only">{{ item.name }}</span>
+                <a
+                    [attr.href]="item.href"
+                    class="text-yellow-400 hover:text-yellow-500"
+                >
+                    <span class="sr-only">{{ item.name }}</span>
 
-                        <img
-                            [src]="'assets/' + item.icon + '.svg'"
-                            alt="{{ item.name }}"
-                        />
-                    </a>
+                    <img
+                        [src]="'assets/' + item.icon + '.svg'"
+                        alt="{{ item.name }}"
+                    />
+                </a>
                 }
             </div>
-            <p class="mt-8 text-xs leading-5 text-gray-500 md:order-1 md:mt-0">
+            <p
+                class="mt-8 text-xs leading-5 text-yellow-500 md:order-1 md:mt-0"
+            >
                 &copy; {{ year }} Webinngo, Inc. All rights reserved.
             </p>
         </div>
