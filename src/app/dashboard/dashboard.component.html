@@ -2,7 +2,7 @@
     <div class="flex justify-around items-center py-5 px-3">
         @for (item of stats; track $index) {
             <div class="bg-white shadow-white-blur p-3">
-                <h1 class="text-4xl gradient-text font-medium tracking-wide w-fit">{{item.count}}+</h1>
+                <h1 class="text-4xl gradient-text font-medium tracking-wide w-fit">{{animatedCounts[$index]}}+</h1>
                 <p class="text-lg text-slate-800 font-medium">{{item.title}}</p>
             </div>
         }

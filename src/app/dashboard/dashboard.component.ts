@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {CounterPipe} from "../counter.pipe";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [],
+    imports: [
+        CounterPipe
+    ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
     stats: Stat[] = [
         {
@@ -25,6 +28,19 @@ export class DashboardComponent {
             title: 'Active Application'
         }
     ]
+
+    animatedCounts: number[] = [];
+
+    constructor(private counterPipe: CounterPipe) { }
+
+
+    ngOnInit() {
+        for (let i = 0; i < this.stats.length; i++) {
+            this.counterPipe.transform(this.stats[i].count).subscribe((count: number) => {
+                this.animatedCounts[i] = count;
+            });
+        }
+    }
 }
 
 export interface Stat {
