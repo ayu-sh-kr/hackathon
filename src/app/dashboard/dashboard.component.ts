@@ -1,16 +1,19 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {CounterPipe} from "../counter.pipe";
+import {CountUp} from "countup.js";
+import {AsyncPipe} from "@angular/common";
 
 @Component({
   selector: 'app-dashboard',
   standalone: true,
     imports: [
-        CounterPipe
+        CounterPipe,
+        AsyncPipe
     ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements AfterViewInit {
 
     stats: Stat[] = [
         {
@@ -34,11 +37,14 @@ export class DashboardComponent implements OnInit {
     constructor(private counterPipe: CounterPipe) { }
 
 
-    ngOnInit() {
+    ngAfterViewInit() {
         for (let i = 0; i < this.stats.length; i++) {
-            this.counterPipe.transform(this.stats[i].count).subscribe((count: number) => {
-                this.animatedCounts[i] = count;
-            });
+            const countUp = new CountUp(`count-${i}`, this.stats[i].count);
+            if (!countUp.error) {
+                countUp.start();
+            } else {
+                console.error(countUp.error);
+            }
         }
     }
 }

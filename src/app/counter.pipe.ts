@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {interval, map, take} from "rxjs";
+import {interval, map, Observable, take} from "rxjs";
 
 @Pipe({
   name: 'counter',
@@ -7,8 +7,8 @@ import {interval, map, take} from "rxjs";
 })
 export class CounterPipe implements PipeTransform {
 
-    transform(value: number): any {
-        return interval(100 / value).pipe(
+    transform(value: number): Observable<number> {
+        return interval(3000 / value).pipe(
             take(value),
             map(i => i + 1)
         );
