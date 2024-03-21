@@ -1,7 +1,7 @@
 <section class="my-5">
     <div class="flex justify-around items-center py-5 px-3">
         @for (item of stats; track $index) {
-            <div class="bg-white shadow-white-blur p-3">
+            <div class="bg-white shadow-white-blur p-3 w-[180px] py-2 h-[115px] flex flex-col gap-y-2">
                 <div class="flex items-center gap-x-1 gradient-text text-4xl font-medium tracking-wide w-fit">
                     <h1 id="count-{{$index}}" class=" ">0</h1><span>+</span>
                 </div>
